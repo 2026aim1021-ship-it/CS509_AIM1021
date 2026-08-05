@@ -20,7 +20,8 @@ int main(){
         printf("2. Run test1\n");
         printf("3. Run test2\n");
         printf("4. Run test3\n");
-        printf("5. Run all tests\n");
+        printf("5. Run test4\n");
+        printf("6. Run all tests\n");
         printf("Select an option: ");
 
         int action;
@@ -39,9 +40,13 @@ int main(){
             system("../assignment_01/driver/main ../assignment_01/tests/test3.txt 32");
         }
         else if(action==5){
+            system("../assignment_01/driver/main ../assignment_01/tests/test4.txt 32");
+        }
+        else if(action==6){
             system("../assignment_01/driver/main ../assignment_01/tests/test1.txt 32");
             system("../assignment_01/driver/main ../assignment_01/tests/test2.txt 32");
             system("../assignment_01/driver/main ../assignment_01/tests/test3.txt 32");
+            system("../assignment_01/driver/main ../assignment_01/tests/test4.txt 32");
         }
         else{
             printf("Invalid action\n");

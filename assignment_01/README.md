@@ -19,7 +19,7 @@ First line of the test file is `M K N`. After that come the M x K values for mat
 ### File Structure
 - src/matrix.c, matrix.h - the actual multiply logic, reading input, printing results, checking equality
 - driver/main.c - takes a test file (and optional block size) as arguments, runs both multiplications, times them, prints everything
-- tests/ - the three input files
+- tests/ - the four input files
 - outputs/ - what the program printed for each test
 
 ### Compilation
@@ -32,6 +32,7 @@ gcc -o assignment_01/driver/main assignment_01/src/matrix.c assignment_01/driver
 assignment_01/driver/main assignment_01/tests/test1.txt 32
 assignment_01/driver/main assignment_01/tests/test2.txt 32
 assignment_01/driver/main assignment_01/tests/test3.txt 32
+assignment_01/driver/main assignment_01/tests/test4.txt 32
 ```
 32 here is the block size, it defaults to 32 if you leave it out.
 
@@ -46,6 +47,8 @@ For every test, the simple and block versions gave the same result (checkEqual r
 | Single | test_02.txt | Matrices A, B | 5, 5, 5 | Block | see outputs/test2_out.txt | Matches | 0.009 ms |
 | Single | test_03.txt | Matrices A, B | 8, 8, 8 | Simple | see outputs/test3_out.txt | Matches | 0.030 ms |
 | Single | test_03.txt | Matrices A, B | 8, 8, 8 | Block | see outputs/test3_out.txt | Matches | 0.017 ms |
+| Single | test_04.txt | Matrices A, B | 50, 50, 50 | Simple | see outputs/test4_out.txt | Matches | 0.572 ms |
+| Single | test_04.txt | Matrices A, B | 50, 50, 50 | Block | see outputs/test4_out.txt | Matches | 0.483 ms |
 
 ### Complexity
 Both versions are O(M*K*N) - blocking doesn't change the complexity, it just makes better use of the cache in practice.

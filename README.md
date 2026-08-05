@@ -26,11 +26,13 @@ CS509_2026AIM1021/
 |   |-- tests/
 |   |   |-- test1.txt
 |   |   |-- test2.txt
-|   |   `-- test3.txt
+|   |   |-- test3.txt
+|   |   `-- test4.txt
 |   `-- outputs/
 |       |-- test1_out.txt
 |       |-- test2_out.txt
-|       `-- test3_out.txt
+|       |-- test3_out.txt
+|       `-- test4_out.txt
 ```
 
 ## Common Wrapper: Build and Usage
@@ -44,8 +46,8 @@ Run it:
 
 Then pick option 1 (GEMM Assignment), and from there:
 - 1 to compile assignment_01
-- 2, 3, 4 to run test1, test2, test3 one at a time
-- 5 to run all three tests together
+- 2, 3, 4, 5 to run test1, test2, test3, test4 one at a time
+- 6 to run all four tests together
 
 ---
 
