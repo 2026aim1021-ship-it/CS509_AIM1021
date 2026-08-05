@@ -1,0 +1,13 @@
+Simple Multiplication : 
+Block Multiplication: 
+Result Matrix:
+58 64 
+139 154 
+Execution time: 0.029000 ms
+
+Result Matrix:
+58 64 
+139 154 
+Execution time: 0.008000 ms
+
+Both Results match
