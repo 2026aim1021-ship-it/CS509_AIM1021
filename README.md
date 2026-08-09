@@ -16,23 +16,8 @@ Written in C, compiled with gcc, run on Linux.
 CS509_2026AIM1021/
 |-- README.md
 |-- common_wrapper/
-|   `-- wrapper.c
 |-- assignment_01/
-|   |-- src/
-|   |   |-- matrix.c
-|   |   `-- matrix.h
-|   |-- driver/
-|   |   `-- main.c
-|   |-- tests/
-|   |   |-- test1.txt
-|   |   |-- test2.txt
-|   |   |-- test3.txt
-|   |   `-- test4.txt
-|   `-- outputs/
-|       |-- test1_out.txt
-|       |-- test2_out.txt
-|       |-- test3_out.txt
-|       `-- test4_out.txt
+`-- assignment_02/
 ```
 
 ## Common Wrapper: Build and Usage
@@ -49,9 +34,15 @@ Then pick option 1 (GEMM Assignment), and from there:
 - 2, 3, 4, 5 to run test1, test2, test3, test4 one at a time
 - 6 to run all four tests together
 
+Or pick option 2 (Shortest Path Assignment), and from there:
+- 1 to compile assignment_02
+- 2 to run all Bellman-Ford tests
+- 3 to run all Floyd-Warshall tests
+
 ---
 
 ## Assignments
 Each assignment has its own README with the algorithm details, complexity analysis, and test/performance results.
 
 - [Assignment 01 - Matrix Multiplication (GEMM)](assignment_01/README.md)
+- [Assignment 02 - Shortest Paths (Bellman-Ford / Floyd-Warshall)](assignment_02/README.md)

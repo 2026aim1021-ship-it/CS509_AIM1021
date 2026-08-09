@@ -1,0 +1,7 @@
+Algorithm Bellman Ford : 
+Vertex distance : 0 0
+1 2
+2 4
+3 7
+4 -2
+Exec time 0.0008ms 
