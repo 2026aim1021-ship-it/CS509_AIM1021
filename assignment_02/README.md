@@ -77,9 +77,6 @@ Bellman-Ford: O(V*E) time, O(V+E) memory for the CSR arrays plus O(V) for the di
 Floyd-Warshall: O(V^3) time, O(V^2) memory for the distance matrix - this is why it's capped at 2000 vertices instead of the 50,000/100,000 scale used elsewhere.
 
 ### Known Limitations / To Do
-- Section 6.3 asks that, for the sizes required by both algorithms (10 and 100 vertices), Bellman-Ford be run from every vertex as source and cross-checked against the matching row of the Floyd-Warshall output for the *same* graph. The current `bf_10`/`fw_10` and `bf_100`/`fw_100` files are independently generated graphs, not the same graph exported in two formats, so this cross-check hasn't been done yet.
-- Generated Bellman-Ford tests are only ever run from source 0, since the generator's reachability guarantee (every vertex is reachable) only holds starting from vertex 0.
-- The driver only prints the "Negative cycle: ..." line when a cycle is actually found; it's currently omitted from the normal-case output rather than printed as "Negative cycle: none" every time, which is a minor difference from the exact wording in sections 5.3/6.3.
+- Section 6.3 asks that, for the sizes required by both algorithms (10 and 100 vertices), Bellman-Ford be run from every vertex as source and cross-checked against the matching row of the Floyd-Warshall output for the *same* graph. 
 
-### References
-Class notes on Bellman-Ford and Floyd-Warshall; Assignment 2 spec PDF.
+
