@@ -8,6 +8,7 @@ int main(){
         printf("........ CS509 Common Wrapper ........\n");
         printf("1. GEMM Assignment\n");
         printf("2. Shortest Path Assignment\n");
+        printf("3. MST Assignment\n");
         printf("0. Exit\n");
         printf("Select an option: ");
         scanf("%d", &choice);
@@ -78,6 +79,39 @@ int main(){
                 system("..\\assignment_02\\driver\\main.exe fw ..\\assignment_02\\tests\\fw_500.txt > ..\\assignment_02\\outputs\\fw_500_out.txt");
                 system("..\\assignment_02\\driver\\main.exe fw ..\\assignment_02\\tests\\fw_1000.txt > ..\\assignment_02\\outputs\\fw_1000_out.txt");
                 system("..\\assignment_02\\driver\\main.exe fw ..\\assignment_02\\tests\\fw_2000.txt > ..\\assignment_02\\outputs\\fw_2000_out.txt");
+            }
+            else{
+                printf("Invalid input\n");
+            }
+        }
+        else if(choice==3){
+            printf("1. Compile\n");
+            printf("2. Compile generator\n");
+            printf("3. Generate test graphs\n");
+            printf("4. Run MST tests (Kruskal + Prim)\n");
+            printf("Select an option: ");
+            int action;
+            scanf("%d", &action);
+
+            if(action==1){
+                system("g++ -std=c++17 -O2 -o ..\\assignment_03\\driver\\main.exe ..\\assignment_02\\src\\csr_bridge.cpp ..\\assignment_03\\src\\kruskal.cpp ..\\assignment_03\\src\\prim.cpp ..\\assignment_03\\driver\\main.cpp");
+            }
+            else if(action==2){
+                system("g++ -std=c++17 -O2 -o ..\\assignment_03\\tools\\gen_mst_graph.exe ..\\assignment_03\\tools\\gen_mst_graph.cpp");
+            }
+            else if(action==3){
+                system("..\\assignment_03\\tools\\gen_mst_graph.exe 10 20 ..\\assignment_03\\tests\\mst_10.txt");
+                system("..\\assignment_03\\tools\\gen_mst_graph.exe 100 250 ..\\assignment_03\\tests\\mst_100.txt");
+                system("..\\assignment_03\\tools\\gen_mst_graph.exe 10000 30000 ..\\assignment_03\\tests\\mst_10000.txt");
+                system("..\\assignment_03\\tools\\gen_mst_graph.exe 50000 150000 ..\\assignment_03\\tests\\mst_50000.txt");
+                system("..\\assignment_03\\tools\\gen_mst_graph.exe 100000 300000 ..\\assignment_03\\tests\\mst_100000.txt");
+            }
+            else if(action==4){
+                system("..\\assignment_03\\driver\\main.exe mst ..\\assignment_03\\tests\\mst_10.txt > ..\\assignment_03\\outputs\\mst_10_out.txt");
+                system("..\\assignment_03\\driver\\main.exe mst ..\\assignment_03\\tests\\mst_100.txt > ..\\assignment_03\\outputs\\mst_100_out.txt");
+                system("..\\assignment_03\\driver\\main.exe mst ..\\assignment_03\\tests\\mst_10000.txt > ..\\assignment_03\\outputs\\mst_10000_out.txt");
+                system("..\\assignment_03\\driver\\main.exe mst ..\\assignment_03\\tests\\mst_50000.txt > ..\\assignment_03\\outputs\\mst_50000_out.txt");
+                system("..\\assignment_03\\driver\\main.exe mst ..\\assignment_03\\tests\\mst_100000.txt > ..\\assignment_03\\outputs\\mst_100000_out.txt");
             }
             else{
                 printf("Invalid input\n");
